@@ -1,0 +1,151 @@
+.garage-layout {
+  display: flex;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+.garage-layout__sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  background: #1a1a1a;
+  border-right: 1px solid #333;
+}
+
+.garage-layout__main {
+  flex: 1;
+  position: relative;
+}
+
+/* Scene */
+.garage-scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #111;
+}
+
+.garage-scene canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.garage-scene__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  color: #fff;
+}
+
+.garage-scene__overlay--error {
+  gap: 12px;
+}
+
+.garage-scene__overlay--error button {
+  padding: 8px 20px;
+  background: #c8a24b;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.garage-scene__spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #c8a24b;
+  border-radius: 50%;
+  animation: garage-spin 0.8s linear infinite;
+}
+
+@keyframes garage-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Picker */
+.garage-picker {
+  padding: 12px;
+  color: #ccc;
+}
+
+.garage-picker__filters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.garage-picker__filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #999;
+}
+
+.garage-picker__filters select {
+  background: #222;
+  border: 1px solid #444;
+  color: #ddd;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.garage-picker__status {
+  font-size: 13px;
+  color: #888;
+  padding: 8px 0;
+}
+
+.garage-picker__status--error {
+  color: #e06060;
+}
+
+.garage-picker__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.garage-picker__item {
+  padding: 8px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #222;
+  border: 1px solid transparent;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.garage-picker__item:hover {
+  background: #2a2a2a;
+  border-color: #555;
+}
+
+.garage-picker__item--selected {
+  border-color: #c8a24b;
+  background: #2a2415;
+}
+
+.garage-picker__name {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #eee;
+}
+
+.garage-picker__meta {
+  display: block;
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+}

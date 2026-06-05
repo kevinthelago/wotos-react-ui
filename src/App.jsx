@@ -4,6 +4,7 @@ import ContentMenu from './components/nav/ContentMenu';
 import SearchMenu from './components/nav/SearchMenu';
 import Player from './components/player/Player';
 import Home from './components/home/Home';
+import Garage from './components/garage/Garage';
 import axios from 'axios';
 import './app.css';
 import { timeHours } from 'd3';
@@ -113,6 +114,7 @@ export default class App extends Component {
                                 :
                                 <div></div>
                         } />
+                        <Route path="garage/*" element={<Garage />} />
                         {/* <Route path="clan" element={
                             this.state.clan ?
                                 <Clan darkTheme={this.state.darkTheme} />
