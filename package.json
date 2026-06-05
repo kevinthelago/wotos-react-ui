@@ -34,6 +34,10 @@
     ]
   },
   "jest": {
+    "testMatch": [
+      "**/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "**/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+    ],
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\](?!(d3|d3-.*|internmap|delaunator|robust-predicates)[/\\\\])",
       "^.+\\.module\\.(css|sass|scss)$"
