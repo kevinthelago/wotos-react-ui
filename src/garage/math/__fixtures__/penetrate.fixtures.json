@@ -1,0 +1,281 @@
+[
+  {
+    "id": "t34-85-hull-front-0deg",
+    "description": "T-34-85 hull front, 45mm@60° LOS, AP — effective≈78mm < 144mm pen, penetrates",
+    "source": "https://tanks.gg/tank/t-34-85",
+    "shell": { "type": "AP", "caliberMm": 85, "penAt100m": 144, "damage": 240 },
+    "hit":   { "thicknessMm": 45, "impactAngleRad": 1.0472 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "overmatch": false, "penetrated": true }
+  },
+  {
+    "id": "t34-85-hull-front-ap-close-angle",
+    "description": "T-34-85 hull front 45mm plate, nearly perpendicular, AP pen",
+    "source": "https://tanks.gg/tank/t-34-85",
+    "shell": { "type": "AP", "caliberMm": 85, "penAt100m": 144, "damage": 240 },
+    "hit":   { "thicknessMm": 45, "impactAngleRad": 0.1745 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "overmatch": false, "penetrated": true }
+  },
+  {
+    "id": "is7-pike-nose-60deg-ap",
+    "description": "IS-7 pike nose 150mm@60°, AP 248mm pen — bounce expected",
+    "source": "https://tanks.gg/tank/is-7",
+    "shell": { "type": "AP", "caliberMm": 122, "penAt100m": 248, "damage": 440 },
+    "hit":   { "thicknessMm": 150, "impactAngleRad": 1.2217 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "overmatch": false, "penetrated": false }
+  },
+  {
+    "id": "is7-pike-nose-heat",
+    "description": "IS-7 pike nose 150mm@60°, HEAT 310mm pen — penetrates",
+    "source": "https://tanks.gg/tank/is-7",
+    "shell": { "type": "HEAT", "caliberMm": 152, "penAt100m": 310, "damage": 530 },
+    "hit":   { "thicknessMm": 150, "impactAngleRad": 1.0472 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "overmatch": false, "penetrated": true }
+  },
+  {
+    "id": "maus-turret-cheek-apcr",
+    "description": "Maus turret cheek 240mm@20°, APCR 303mm — penetrates",
+    "source": "https://tanks.gg/tank/maus",
+    "shell": { "type": "APCR", "caliberMm": 128, "penAt100m": 303, "damage": 560 },
+    "hit":   { "thicknessMm": 240, "impactAngleRad": 0.3491 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "overmatch": false, "penetrated": true }
+  },
+  {
+    "id": "maus-turret-cheek-ap-fail",
+    "description": "Maus turret cheek 240mm@20°, AP 246mm — fails effective armor",
+    "source": "https://tanks.gg/tank/maus",
+    "shell": { "type": "AP", "caliberMm": 105, "penAt100m": 246, "damage": 390 },
+    "hit":   { "thicknessMm": 240, "impactAngleRad": 0.3491 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "overmatch": false, "penetrated": false }
+  },
+  {
+    "id": "leopard1-hull-front-ap",
+    "description": "Leopard 1 upper hull 70mm@60°, AP 278mm — penetrates easily",
+    "source": "https://tanks.gg/tank/leopard-1",
+    "shell": { "type": "AP", "caliberMm": 105, "penAt100m": 278, "damage": 390 },
+    "hit":   { "thicknessMm": 70, "impactAngleRad": 1.0472 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "overmatch": false, "penetrated": true }
+  },
+  {
+    "id": "ricochet-ap-over-70deg",
+    "description": "AP at 72° — ricochet triggers",
+    "source": "wot-mechanics",
+    "shell": { "type": "AP", "caliberMm": 100, "penAt100m": 200, "damage": 320 },
+    "hit":   { "thicknessMm": 80, "impactAngleRad": 1.2566 },
+    "rng": 0.5,
+    "expect": { "ricochet": true, "penetrated": false, "damageRoll": 0 }
+  },
+  {
+    "id": "ricochet-apcr-over-70deg",
+    "description": "APCR at 75° — ricochet triggers",
+    "source": "wot-mechanics",
+    "shell": { "type": "APCR", "caliberMm": 100, "penAt100m": 250, "damage": 320 },
+    "hit":   { "thicknessMm": 60, "impactAngleRad": 1.3090 },
+    "rng": 0.5,
+    "expect": { "ricochet": true, "penetrated": false, "damageRoll": 0 }
+  },
+  {
+    "id": "ricochet-heat-over-85deg",
+    "description": "HEAT at 87° — ricochet triggers",
+    "source": "wot-mechanics",
+    "shell": { "type": "HEAT", "caliberMm": 105, "penAt100m": 300, "damage": 400 },
+    "hit":   { "thicknessMm": 50, "impactAngleRad": 1.5184 },
+    "rng": 0.5,
+    "expect": { "ricochet": true, "penetrated": false, "damageRoll": 0 }
+  },
+  {
+    "id": "heat-no-ricochet-at-70deg",
+    "description": "HEAT at 70° — below 85° threshold, no ricochet",
+    "source": "wot-mechanics",
+    "shell": { "type": "HEAT", "caliberMm": 105, "penAt100m": 300, "damage": 400 },
+    "hit":   { "thicknessMm": 50, "impactAngleRad": 1.2217 },
+    "rng": 0.5,
+    "expect": { "ricochet": false }
+  },
+  {
+    "id": "he-never-ricochets",
+    "description": "HE at 80° — no ricochet (HE has no threshold)",
+    "source": "wot-mechanics",
+    "shell": { "type": "HE", "caliberMm": 152, "penAt100m": 90, "damage": 910 },
+    "hit":   { "thicknessMm": 30, "impactAngleRad": 1.3963 },
+    "rng": 0.5,
+    "expect": { "ricochet": false }
+  },
+  {
+    "id": "overmatch-thin-plate-ap",
+    "description": "AP 120mm caliber vs 25mm plate — overmatch, ricochet impossible at 72°",
+    "source": "wot-mechanics-overmatch",
+    "shell": { "type": "AP", "caliberMm": 120, "penAt100m": 200, "damage": 320 },
+    "hit":   { "thicknessMm": 25, "impactAngleRad": 1.2566 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "overmatch": true, "penetrated": true }
+  },
+  {
+    "id": "overmatch-exact-3x",
+    "description": "Caliber = exactly 3× thickness — overmatch triggers",
+    "source": "wot-mechanics-overmatch",
+    "shell": { "type": "AP", "caliberMm": 90, "penAt100m": 200, "damage": 280 },
+    "hit":   { "thicknessMm": 30, "impactAngleRad": 1.2566 },
+    "rng": 0.5,
+    "expect": { "overmatch": true, "ricochet": false }
+  },
+  {
+    "id": "overmatch-just-below-3x",
+    "description": "Caliber = 2.99× thickness — no overmatch",
+    "source": "wot-mechanics-overmatch",
+    "shell": { "type": "AP", "caliberMm": 89, "penAt100m": 200, "damage": 280 },
+    "hit":   { "thicknessMm": 30, "impactAngleRad": 1.2566 },
+    "rng": 0.5,
+    "expect": { "overmatch": false }
+  },
+  {
+    "id": "he-low-pen-thick-plate",
+    "description": "HE 90mm pen vs 120mm plate — does not penetrate",
+    "source": "wot-mechanics",
+    "shell": { "type": "HE", "caliberMm": 152, "penAt100m": 90, "damage": 910 },
+    "hit":   { "thicknessMm": 120, "impactAngleRad": 0 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "penetrated": false, "damageRoll": 0 }
+  },
+  {
+    "id": "he-pen-thin-plate",
+    "description": "HE 90mm pen vs 50mm plate at 0° — penetrates",
+    "source": "wot-mechanics",
+    "shell": { "type": "HE", "caliberMm": 152, "penAt100m": 90, "damage": 910 },
+    "hit":   { "thicknessMm": 50, "impactAngleRad": 0 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "penetrated": true }
+  },
+  {
+    "id": "ap-perpendicular-pen",
+    "description": "AP 200mm pen vs 100mm at 0° — clean penetration",
+    "source": "wot-mechanics",
+    "shell": { "type": "AP", "caliberMm": 100, "penAt100m": 200, "damage": 320 },
+    "hit":   { "thicknessMm": 100, "impactAngleRad": 0 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "overmatch": false, "penetrated": true }
+  },
+  {
+    "id": "ap-exactly-equal-pen-vs-effective",
+    "description": "AP effective armor == pen (edge: penetrated = true, pen >= effective)",
+    "source": "wot-mechanics",
+    "shell": { "type": "AP", "caliberMm": 100, "penAt100m": 100, "damage": 320 },
+    "hit":   { "thicknessMm": 100, "impactAngleRad": 0 },
+    "rng": 0.5,
+    "expect": { "penetrated": true }
+  },
+  {
+    "id": "damage-roll-min-bound",
+    "description": "rng=0 → damageRoll = damage * 0.75",
+    "source": "wot-mechanics",
+    "shell": { "type": "AP", "caliberMm": 100, "penAt100m": 200, "damage": 320 },
+    "hit":   { "thicknessMm": 50, "impactAngleRad": 0 },
+    "rng": 0,
+    "expect": { "penetrated": true, "damageRoll": 240 }
+  },
+  {
+    "id": "damage-roll-max-bound",
+    "description": "rng=1 → damageRoll = damage * 1.25",
+    "source": "wot-mechanics",
+    "shell": { "type": "AP", "caliberMm": 100, "penAt100m": 200, "damage": 320 },
+    "hit":   { "thicknessMm": 50, "impactAngleRad": 0 },
+    "rng": 1,
+    "expect": { "penetrated": true, "damageRoll": 400 }
+  },
+  {
+    "id": "damage-roll-zero-on-no-pen",
+    "description": "No penetration → damageRoll must be 0",
+    "source": "wot-mechanics",
+    "shell": { "type": "AP", "caliberMm": 100, "penAt100m": 50, "damage": 320 },
+    "hit":   { "thicknessMm": 200, "impactAngleRad": 0 },
+    "rng": 1,
+    "expect": { "penetrated": false, "damageRoll": 0 }
+  },
+  {
+    "id": "e100-upper-hull-apcr",
+    "description": "E 100 upper hull 200mm@60°, APCR 311mm — effective≈349mm > 311mm, does NOT penetrate",
+    "source": "https://tanks.gg/tank/e-100",
+    "shell": { "type": "APCR", "caliberMm": 128, "penAt100m": 311, "damage": 560 },
+    "hit":   { "thicknessMm": 200, "impactAngleRad": 1.0472 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "penetrated": false }
+  },
+  {
+    "id": "e100-upper-hull-ap-fail",
+    "description": "E 100 upper hull 200mm@60°, AP 246mm — fails",
+    "source": "https://tanks.gg/tank/e-100",
+    "shell": { "type": "AP", "caliberMm": 105, "penAt100m": 246, "damage": 390 },
+    "hit":   { "thicknessMm": 200, "impactAngleRad": 1.0472 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "penetrated": false }
+  },
+  {
+    "id": "type5-heavy-hull-he",
+    "description": "Type 5 Heavy 260mm@15°, HE 150mm pen — no pen",
+    "source": "https://tanks.gg/tank/type-5-heavy",
+    "shell": { "type": "HE", "caliberMm": 152, "penAt100m": 150, "damage": 910 },
+    "hit":   { "thicknessMm": 260, "impactAngleRad": 0.2618 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "penetrated": false }
+  },
+  {
+    "id": "strvs1-side-103mm-apcr",
+    "description": "Strv 103B upper side 30mm@78°, APCR ricochet test — no overmatch (caliber 120 < 90mm)",
+    "source": "https://tanks.gg/tank/strv-103b",
+    "shell": { "type": "APCR", "caliberMm": 120, "penAt100m": 308, "damage": 390 },
+    "hit":   { "thicknessMm": 30, "impactAngleRad": 1.3614 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "overmatch": true }
+  },
+  {
+    "id": "obj430u-upper-hull-ap",
+    "description": "Obj 430U upper hull 120mm@25°, AP 258mm — penetrates",
+    "source": "https://tanks.gg/tank/object-430u",
+    "shell": { "type": "AP", "caliberMm": 122, "penAt100m": 258, "damage": 440 },
+    "hit":   { "thicknessMm": 120, "impactAngleRad": 0.4363 },
+    "rng": 0.5,
+    "expect": { "ricochet": false, "penetrated": true }
+  },
+  {
+    "id": "heat-normalization-2deg",
+    "description": "HEAT normalises only 2°; verify effective armor is thicker than AP (5°) would give",
+    "source": "wot-mechanics",
+    "shell": { "type": "HEAT", "caliberMm": 105, "penAt100m": 330, "damage": 400 },
+    "hit":   { "thicknessMm": 100, "impactAngleRad": 0.5236 },
+    "rng": 0.5,
+    "expect": { "ricochet": false }
+  },
+  {
+    "id": "ap-normalization-5deg",
+    "description": "AP normalises 5°; same plate as heat fixture — effective armor should be lower",
+    "source": "wot-mechanics",
+    "shell": { "type": "AP", "caliberMm": 100, "penAt100m": 200, "damage": 320 },
+    "hit":   { "thicknessMm": 100, "impactAngleRad": 0.5236 },
+    "rng": 0.5,
+    "expect": { "ricochet": false }
+  },
+  {
+    "id": "apcr-exactly-70deg-boundary",
+    "description": "APCR at exactly 70° — boundary; no ricochet (> not >=)",
+    "source": "wot-mechanics",
+    "shell": { "type": "APCR", "caliberMm": 100, "penAt100m": 250, "damage": 320 },
+    "hit":   { "thicknessMm": 80, "impactAngleRad": 1.2217 },
+    "rng": 0.5,
+    "expect": { "ricochet": false }
+  },
+  {
+    "id": "ap-just-over-70deg-ricochet",
+    "description": "AP at 70.1° — ricochet (strictly greater than 70°)",
+    "source": "wot-mechanics",
+    "shell": { "type": "AP", "caliberMm": 100, "penAt100m": 200, "damage": 320 },
+    "hit":   { "thicknessMm": 80, "impactAngleRad": 1.2235 },
+    "rng": 0.5,
+    "expect": { "ricochet": true }
+  }
+]
