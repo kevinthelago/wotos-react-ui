@@ -41,6 +41,10 @@
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\](?!(d3|d3-.*|internmap|delaunator|robust-predicates)[/\\\\])",
       "^.+\\.module\\.(css|sass|scss)$"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "**/*.{spec,test}.{js,jsx,ts,tsx}"
     ]
   },
   "browserslist": {
